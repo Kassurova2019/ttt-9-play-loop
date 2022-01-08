@@ -1,4 +1,5 @@
-# Helper Methods
+# Helper Methods 
+require "pry"
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -36,3 +37,13 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+  counter = 0
+  
+  until counter == 9
+    binding.pry
+    counter += 1
+    turn(board)
+  end
+end
